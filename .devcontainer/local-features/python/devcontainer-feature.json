@@ -1,0 +1,37 @@
+{
+    "id": "python",
+    "name": "Python",
+    "options": {
+
+    },
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    },    
+    "containerEnv": {
+      "PIPX_HOME": "/usr/local/py-utils",
+      "PIPX_BIN_DIR": "/usr/local/py-utils/bin",
+      "PATH": "/usr/local/py-utils/bin:${PATH}"
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance"
+        ],
+        "settings": {
+          "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+          "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+          "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+          "python.linting.flake8Enabled": false,
+          "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+          "python.linting.mypyEnabled": false,
+          "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+          "python.linting.pylintEnabled": false
+        }
+      }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+  }

@@ -1,0 +1,27 @@
+{
+    "id": "node-ts",
+    "name": "Node & Typescript",
+    "options": {
+
+    },
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    },    
+    "containerEnv": {
+
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "dbaeumer.vscode-eslint"
+        ],
+        "settings": {
+
+        }
+      }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+  }

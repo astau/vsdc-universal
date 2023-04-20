@@ -1,0 +1,11 @@
+{
+    "id": "python-ml",
+    "name": "Python machine learning",
+    "install": {
+        "app": "",
+        "file": "install.sh"
+    },
+    "installsAfter": [
+        "./local-features/python"
+    ]    
+}

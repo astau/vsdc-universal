@@ -1,0 +1,34 @@
+{
+    "name": "universal",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": "."
+    },
+    "runArgs": ["--name", "${localWorkspaceFolderBasename}"],
+    "features": {
+        "./local-features/python":{},
+        "./local-features/python-ml":{},
+        "./local-features/node-ts":{}
+        //"./local-features/setup-user":{}
+    },
+
+    "remoteUser": "srikanth",
+    "containerUser": "srikanth",
+
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+
+    // // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "GitHub.vscode-pull-request-github"
+            ]
+        }
+    }
+}
