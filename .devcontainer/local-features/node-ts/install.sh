@@ -18,6 +18,7 @@ check_packages nodejs npm
 
 # Install Typescript
 npm install -g typescript 
+npm install -g ts-node 
 
 # Clean up
 rm -rf /var/lib/apt/lists/*
