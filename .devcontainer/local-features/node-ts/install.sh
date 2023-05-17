@@ -13,8 +13,9 @@ check_packages() {
 export DEBIAN_FRONTEND=noninteractive
 
 # Install Node
-echo 'Installing Node ...'
-check_packages nodejs npm
+echo 'Installing Node 20...'
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+check_packages nodejs
 
 # Install Typescript
 npm install -g typescript 

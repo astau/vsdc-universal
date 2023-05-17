@@ -6,6 +6,19 @@
     },
     "runArgs": ["--name", "${localWorkspaceFolderBasename}"],
     "features": {
+        // start -  vsdc-base-ubuntu
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "username": "srikanth",
+            "userUid": "1000",
+            "userGid": "1000",
+            "installZsh": "true",
+            "configureZshAsDefaultShell": "true",
+            "installOhMyZsh": "true",
+            "upgradePackages": "true"
+        },
+        "ghcr.io/devcontainers/features/github-cli:1": {},
+        // end -  vsdc-base-ubuntu
+        
         "./local-features/python":{},
         "./local-features/python-ml":{},
         "./local-features/node-ts":{}
@@ -18,16 +31,32 @@
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
 
-    // // Configure tool-specific properties.
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "uname -a",
+
     "customizations": {
-        // Configure properties specific to VS Code.
+
         "vscode": {
-            // Set *default* container specific settings.json values on container create.
             "settings": {
+                // Clone your personal dotfiles repo to customize enviroment
+                "dotfiles.repository": "git@github.com:astau/my-dotfiles.git",
+                "dotfiles.installCommand": "~/.my-dotfiles/bootstrap.sh",
+                "dotfiles.targetPath": "~/.my-dotfiles"                
             },
-            // Add the IDs of extensions you want installed when the container is created.
             "extensions": [
-                "GitHub.vscode-pull-request-github"
+                "dbaeumer.vscode-eslint",
+                "mikestead.dotenv",
+                "ms-vscode.makefile-tools",
+                "VisualStudioExptTeam.vscodeintellicode",
+                "VisualStudioExptTeam.intellicode-api-usage-examples",                
+                "ms-azuretools.vscode-docker",
+                "GitHub.vscode-pull-request-github",
+                "eamodio.gitlens",
+                "GitHub.copilot",
+                "GitHub.copilot-labs",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "yoavbls.pretty-ts-errors"
             ]
         }
     }
