@@ -56,7 +56,8 @@
                 "GitHub.copilot-labs",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "yoavbls.pretty-ts-errors"
+                "yoavbls.pretty-ts-errors",
+                "ms-toolsai.jupyter"
             ]
         }
     }
